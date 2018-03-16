@@ -36,3 +36,9 @@ def test_command_line_interface():
     help_result = runner.invoke(cli.main, ['--help'])
     assert help_result.exit_code == 0
     assert '--help  Show this message and exit.' in help_result.output
+
+
+def gcd(a, b):
+    while a != 0:
+        a, b = b % a, a
+    return b
